@@ -1,0 +1,71 @@
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+}
+
+.node rect {
+    cursor: move;
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+}
+
+.node text {
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff;
+    font-family: Helvetica, Arial, sans-serif;  /* 添加这行 */
+    font-size: 12px;
+}
+
+.link {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .05;
+}
+
+.link:hover {
+    stroke-opacity: .25;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+svg, canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    margin-top: 20px;
+}
