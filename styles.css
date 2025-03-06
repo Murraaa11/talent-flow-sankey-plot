@@ -9,9 +9,11 @@
     pointer-events: none;
 }
 
+
 .h3 {
     font-family: "Oswald", sans-serif;
     font-weight: 500;
+    margin-bottom: 20px; 
 }
 
 .node rect {
@@ -43,6 +45,7 @@
     flex-direction: column;
     min-height: 100vh;
     padding: 20px;
+    min-width: 320px;
 }
 
 .title {
@@ -50,13 +53,11 @@
     margin-bottom: 20px;
 }
 
-.chart-container {
+.chart-wrapper {
     position: relative;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+    /* 修改为固定高度或最小高度 */
+    min-height: 800px;  /* 与 chartHeight 相同 */
+    width: 100%;
 }
 
 svg, canvas {
@@ -65,7 +66,19 @@ svg, canvas {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
+/* 添加响应式页脚样式 */
 footer {
-    margin-top: 20px;
+    margin-top: autp;  /* 将页脚推到底部 */
+    font-size: calc(0.8rem + 0.2vw);
+}
+
+/* 在小屏幕上调整间距 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .chart-wrapper {
+        margin: 10px 0;
+    }
 }
